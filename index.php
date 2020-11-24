@@ -13,7 +13,9 @@ get_header();
       </div>
     </div>  
   </div>
+  <!-- Main Content -->
 <div class="container container--narrow page-section">
+
 <?php while(have_posts()){
   the_post();?>
 <div class="post-item">
@@ -26,8 +28,11 @@ get_header();
     <p><a  class="btn btn--blue" href="<?php the_permalink(); ?>">Continue reading &raquo; </a></p>
   </div>
 </div>
-  <?php
-} ?>
+  <?php 
+}
+ echo paginate_links();
+?>
+
 </div>
 
 <?php
